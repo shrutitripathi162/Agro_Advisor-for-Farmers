@@ -1,0 +1,201 @@
+/* Custom styles for the Crop Production Data component */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #f3ce00;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.api-selector {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #f3ce00;
+    font-weight: bold
+}
+
+.api-selector:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.filters {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.loading,
+.error,
+.no-records {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    text-wrap: wrap;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.even-row {
+    background-color: #f8f8f8;
+}
+
+.odd-row {
+    background-color: #ffffff;
+}
+
+th {
+    background-color: #f3ce00;
+    position: sticky;
+    font-weight: bold;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+tr:hover {
+    background-color: #f3f4f6;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-input {
+        margin-bottom: 0.5rem;
+    }
+
+    table {
+        font-size: 0.875rem;
+    }
+
+    th,
+    td {
+        padding: 0.5rem;
+    }
+
+    /* Convert table to cards for mobile */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    .even-row,
+    .odd-row {
+        background-color: #fff;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .loading,
+    .error,
+    .no-records {
+        font-size: 1rem;
+    }
+}
+
+/* Navbar styles (assuming a basic structure) */
+.navbar {
+    background-color: #2c3e50;
+    padding: 1rem;
+    color: white;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.navbar a:hover {
+    background-color: #34495e;
+    border-radius: 4px;
+}
